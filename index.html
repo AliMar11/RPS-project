@@ -1,1 +1,29 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<title>Rock Paper Scissors Game</title>
+</head>
+<script type="text/javascript">
+	$( document ).ready(function() {
+  var myArray = ["rock", "paper", "scissor"];
+ $( "a" ).click(function() {
+   var randomNumber = Math.floor(Math.random() * myArray.length);
+   var randomSelection = myArray[randomNumber];
+   var whatHasBeenChickedOn = $(this);
+   var playerChoice = $(whatHasBeenChickedOn).attr('href');
+   playerChoice = playerChoice.replace("#", "");
+  alert( "I am " + playerChoice + " the computer is " + randomSelection + "!");
+ www.codepen.io/AliMar11/pen/YyRmEb.reload();
+ });   
+
+});
+</script>
+<body>
+<a href="#rock"><img src="http://img2.wikia.nocookie.net/__cb20141120133208/epicrapbattlesofhistory/images/4/4b/A_Rock!.gif" height="46" width="42">Rock</a>
+
+<a href="#paper"> <img src= "http://drawception.com/pub/panels/2012/11-30/Hc3DrO9SFM-2.png" height="60" width="70"> Paper</a>
+
+<a href="#scissors"><img src= "http://cdn.xl.thumbs.canstockphoto.com/canstock15281860.jpg" height="60" width= "70"> Scissors</a>
+</body>
+</html>
